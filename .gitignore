@@ -1,0 +1,13 @@
+.idea
+.vscode
+__pycache__
+test/__pycache__
+*/__pycache__
+run/celerybeat.pid
+run/celerybeat-schedule.bak
+run/celerybeat-schedule.dat
+run/celerybeat-schedule.dir
+*/*.pyc
+logs/files/*
+
+
