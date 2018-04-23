@@ -82,7 +82,7 @@ class VoiceToAudioHandler(RequestHandler):
                                  'border-radius:5px;">' \
                                  '语言播报 ' + str(vv) + '</div>' \
                                  '<div style="position:relative;top:-30px;"><video controls=""  autoplay="" name="media" style="height:100px"><source src="' + config.VOICTTOAUDIO_URL \
-                                 + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + voice + ' type="audio/mp3"></video></div>' \
+                                 + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + voice + '" type="audio/mp3"></video></div>' \
                                  '<div style="padding:18px;border:1px solid #ccc;font-size:20px;color:#fff;background:#21B384;' \
                                  'border-radius:5px;line-height:40px">' + voice + '</div></div>'
                 else:
@@ -93,7 +93,7 @@ class VoiceToAudioHandler(RequestHandler):
                                 'border-radius:5px;">' \
                                 '语言播报 '+str(vv)+'</div>' \
                                 '<div style="position:relative;top:-30px;"><video controls=""  name="media" style="height:100px"><source src="' + config.VOICTTOAUDIO_URL \
-                                 + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + vo + ' type="audio/mp3"></video></div>' \
+                                 + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + vo + '" type="audio/mp3"></video></div>' \
                                 '<div style="padding:18px;border:1px solid #ccc;font-size:20px;color:#fff;background:#21B384;' \
                                 'border-radius:5px;line-height:40px">'+vo+'</div></div>'
                         vv += 1
