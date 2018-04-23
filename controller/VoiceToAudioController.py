@@ -37,8 +37,8 @@ def countWords(s):
     return n, n2
 
 
-def unicode_hex(data: str):
-    return str(binascii.hexlify(data.encode('utf-8')), 'ascii')
+def unicode_hex(strs):
+    return str(binascii.hexlify(strs.encode('utf-8')), 'ascii')
 
 
 class VoiceToAudioHandler(RequestHandler):
