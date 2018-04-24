@@ -77,25 +77,27 @@ class VoiceToAudioHandler(RequestHandler):
                 data_html = ""
                 vv = 1
                 if int(si) == 0:
-                    data_html = '<div style="display:black;margin-bottom:30px;">' \
+                    data_html = '<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /></head><body>' \
+                                '<div style="display:black;margin-bottom:30px;">' \
                                  '<div style="padding:20px;border:1px solid #ccc;font-size:22px;color:#fff;background:#4684C3;' \
                                  'border-radius:5px;">' \
                                  '语言播报 ' + str(vv) + '</div>' \
                                  '<div style="position:relative;top:-30px;"><video controls=""  autoplay="" name="media" style="height:100px"><source src="' + config.VOICTTOAUDIO_URL \
                                  + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + voice + '" type="audio/mp3"></video></div>' \
                                  '<div style="padding:18px;border:1px solid #ccc;font-size:20px;color:#fff;background:#21B384;' \
-                                 'border-radius:5px;line-height:40px">' + voice + '</div></div>'
+                                 'border-radius:5px;line-height:40px">' + voice + '</div></div></body></html>'
                 else:
                     for v in voices:
                         vo = "".join(v)
-                        data_html += '<div style="display:black;margin-bottom:30px;">' \
+                        data_html +='<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /></head><body>' \
+                                '<div style="display:black;margin-bottom:30px;">' \
                                 '<div style="padding:20px;border:1px solid #ccc;font-size:22px;color:#fff;background:#4684C3;' \
                                 'border-radius:5px;">' \
                                 '语言播报 '+str(vv)+'</div>' \
                                 '<div style="position:relative;top:-30px;"><video controls=""  name="media" style="height:100px"><source src="' + config.VOICTTOAUDIO_URL \
                                  + b_token + '&vol=9&per=0&spd=5&pit=5&tex=' + vo + '" type="audio/mp3"></video></div>' \
                                 '<div style="padding:18px;border:1px solid #ccc;font-size:20px;color:#fff;background:#21B384;' \
-                                'border-radius:5px;line-height:40px">'+vo+'</div></div>'
+                                'border-radius:5px;line-height:40px">'+vo+'</div></div></body></html>'
                         vv += 1
 
                 return self.write(data_html)
