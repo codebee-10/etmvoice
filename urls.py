@@ -3,11 +3,11 @@
 
 __all__ = ['urls_pattern']
 
-#from controller.VoiceController import VoiceHandler
+from controller.VoiceController import VoiceHandler
 from controller.VoiceToAudioController import VoiceToAudioHandler
 
 urls_pattern = [
-    (r"/", VoiceToAudioHandler),
- #   (r"/tsvoice", VoiceHandler),
+    (r"/", VoiceHandler),
+    (r"/tsvoice", VoiceToAudioHandler),
 ]
 
